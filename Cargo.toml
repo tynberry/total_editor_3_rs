@@ -1,0 +1,17 @@
+[package]
+name = "total_editor_3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base64 = "0.22.1"
+bytemuck = "1.17.0"
+nanoserde = { version = "0.1.37", optional = true }
+serde = { version = "1.0.209", features = ["derive"], optional = true }
+serde_json = { version = "1.0.127", optional = true }
+thiserror = "1.0.63"
+
+[features]
+default = ["serde"]
+serde = ["dep:serde", "dep:serde_json"]
+nanoserde = ["dep:nanoserde"]
