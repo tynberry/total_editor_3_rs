@@ -14,8 +14,5 @@ pub struct Entity {
     pub color: [u8; 3],
     pub angles: [f32; 3],
     pub radius: f32,
-    pub display: u8,
-    pub model: String,
-    pub texture: String,
     pub properties: HashMap<String, String>,
 }
