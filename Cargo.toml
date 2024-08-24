@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Loader of Total Editor's level files (*.te3)"
 repository = "https://github.com/tynberry/total_editor_3_rs"
-license-file = "LICENSE.txt"
+license-file = "LICENSE"
 
 [dependencies]
 base64 = "0.22.1"
