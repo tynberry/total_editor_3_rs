@@ -1,7 +1,4 @@
-use std::{
-    path::{Path, PathBuf},
-    str::FromStr,
-};
+use std::{path::PathBuf, str::FromStr};
 
 use crate::interim::TileInterim;
 
@@ -55,13 +52,13 @@ impl Assets {
 
     /// Gets texture path indexed by this index.
     #[inline]
-    pub fn get_texture(&self, index: usize) -> &Path {
-        &self.textures[index]
+    pub fn get_texture(&self, index: usize) -> Option<&PathBuf> {
+        self.textures.get(index)
     }
 
     /// Gets model path indexed by this index.
     #[inline]
-    pub fn get_model(&self, index: usize) -> &Path {
-        &self.models[index]
+    pub fn get_model(&self, index: usize) -> Option<&PathBuf> {
+        self.models.get(index)
     }
 }
