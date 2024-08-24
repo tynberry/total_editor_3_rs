@@ -2,6 +2,9 @@
 name = "teloader"
 version = "0.1.0"
 edition = "2021"
+description = "Loader of Total Editor's level files (*.te3)"
+repository = "https://github.com/tynberry/total_editor_3_rs"
+license-file = "LICENSE.txt"
 
 [dependencies]
 base64 = "0.22.1"
