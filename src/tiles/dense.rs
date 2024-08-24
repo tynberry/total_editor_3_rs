@@ -83,7 +83,7 @@ impl DenseTiles {
 
 // Getters
 impl DenseTiles {
-    ///Computes inner index to tile at coordinates [x,y,z].
+    ///Computes inner index to tile at coordinates \[x,y,z\].
     #[inline]
     pub fn index_from_coords(&self, x: usize, y: usize, z: usize) -> usize {
         x + (y * self.width * self.length) + (z * self.width)
