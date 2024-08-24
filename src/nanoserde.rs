@@ -43,7 +43,12 @@ pub fn from_path(path: impl AsRef<Path>) -> Result<(Vec<Entity>, RawTiles, Asset
     //get interim
     let interim = interim_from_path(path)?;
     //convert interim
-    let entities = interim.ents;
+    let mut entities = interim.ents;
+    entities.iter_mut().for_each(|ent| {
+        ent.position[0] = ent.position[0] * 0.5;
+        ent.position[1] = ent.position[1] * 0.5;
+        ent.position[2] = ent.position[2] * 0.5;
+    });
     let raw_tiles = RawTiles::from_interim(&interim.tiles)?;
     let assets = Assets::from_interim(&interim.tiles);
     //compose them into a tuple
@@ -55,7 +60,12 @@ pub fn from_str(str: &str) -> Result<(Vec<Entity>, RawTiles, Assets), LoadError>
     //get interim
     let interim = interim_from_str(str)?;
     //convert interim
-    let entities = interim.ents;
+    let mut entities = interim.ents;
+    entities.iter_mut().for_each(|ent| {
+        ent.position[0] = ent.position[0] * 0.5;
+        ent.position[1] = ent.position[1] * 0.5;
+        ent.position[2] = ent.position[2] * 0.5;
+    });
     let raw_tiles = RawTiles::from_interim(&interim.tiles)?;
     let assets = Assets::from_interim(&interim.tiles);
     //compose them into a tuple
