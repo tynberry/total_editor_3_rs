@@ -24,6 +24,6 @@ pub struct TileInterim {
     pub height: u32,
     pub length: u32,
     pub textures: Vec<String>,
-    pub models: Vec<String>,
+    pub shapes: Vec<String>,
     pub data: String,
 }

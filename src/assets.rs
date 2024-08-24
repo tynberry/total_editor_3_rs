@@ -26,7 +26,7 @@ impl Assets {
             .unwrap();
 
         let models = interim
-            .models
+            .shapes
             .iter()
             .map(|path| PathBuf::from_str(path))
             .collect::<Result<Vec<PathBuf>, _>>()
