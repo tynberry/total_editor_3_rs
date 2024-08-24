@@ -109,6 +109,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "teloader"
+version = "0.1.0"
+dependencies = [
+ "base64",
+ "bytemuck",
+ "nanoserde",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "thiserror"
 version = "1.0.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -126,18 +138,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "total_editor_rs"
-version = "0.1.0"
-dependencies = [
- "base64",
- "bytemuck",
- "nanoserde",
- "serde",
- "serde_json",
- "thiserror",
 ]
 
 [[package]]

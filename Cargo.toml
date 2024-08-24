@@ -1,5 +1,5 @@
 [package]
-name = "total_editor_rs"
+name = "teloader"
 version = "0.1.0"
 edition = "2021"
 
