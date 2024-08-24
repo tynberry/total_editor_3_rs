@@ -11,3 +11,6 @@ pub mod tiles;
 
 pub mod assets;
 pub mod entities;
+
+#[cfg(test)]
+mod tests;
