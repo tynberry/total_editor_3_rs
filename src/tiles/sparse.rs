@@ -63,13 +63,13 @@ impl SparseTiles {
                 cursor += -tile.model as i64;
             } else {
                 //convert it
-                tiles[cursor as usize] = SparseTile {
+                tiles.push(SparseTile {
                     position: coords_from_index(cursor as usize),
                     model: tile.model as usize,
                     texture: tile.texture as usize,
                     yaw: tile.angle as f32,
                     pitch: tile.pitch as f32,
-                };
+                });
                 //move cursor
                 cursor += 1;
             }
